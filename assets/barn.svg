@@ -1,0 +1,33 @@
+<svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="120" cy="206" rx="90" ry="10" fill="#3a2a1c" opacity="0.12"/>
+  <rect x="104" y="18" width="32" height="26" fill="#fff8ec" stroke="#3a2a1c" stroke-width="4"/>
+  <path d="M98 18l22-16l22 16z" fill="#8a5a3b" stroke="#3a2a1c" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="116" y="-2" width="8" height="12" fill="#e6a93c"/>
+  <path d="M20 96
+           c0-18 30-52 100-52
+           c70 0 100 34 100 52
+           l-24 6
+           c-16-34-58-46-76-46
+           c-18 0-60 12-76 46z"
+        fill="#8a5a3b" stroke="#3a2a1c" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M20 96l24 6l4-10l-22-8z" fill="#6b4326"/>
+  <path d="M220 96l-24 6l-4-10l22-8z" fill="#6b4326"/>
+  <rect x="18" y="98" width="204" height="10" rx="3" fill="#e6a93c"/>
+  <rect x="46" y="106" width="148" height="34" fill="#c1443a" stroke="#3a2a1c" stroke-width="5"/>
+  <rect x="112" y="112" width="16" height="22" fill="#bfe6e4" stroke="#3a2a1c" stroke-width="3"/>
+  <path d="M120 112v22M112 123h16" stroke="#fff8ec" stroke-width="2"/>
+  <rect x="30" y="140" width="180" height="64" fill="#c1443a" stroke="#3a2a1c" stroke-width="5"/>
+  <rect x="48" y="156" width="26" height="26" fill="#bfe6e4" stroke="#3a2a1c" stroke-width="4"/>
+  <path d="M61 156v26M48 169h26" stroke="#fff8ec" stroke-width="2"/>
+  <rect x="166" y="156" width="26" height="26" fill="#bfe6e4" stroke="#3a2a1c" stroke-width="4"/>
+  <path d="M179 156v26M166 169h26" stroke="#fff8ec" stroke-width="2"/>
+  <rect x="96" y="150" width="48" height="54" fill="#f3e6c8" stroke="#3a2a1c" stroke-width="5"/>
+  <line x1="120" y1="150" x2="120" y2="204" stroke="#3a2a1c" stroke-width="4"/>
+  <path d="M98 152l20 18M142 152l-20 18" stroke="#8a5a3b" stroke-width="3"/>
+  <circle cx="112" cy="180" r="3" fill="#5a3826"/>
+  <circle cx="128" cy="180" r="3" fill="#5a3826"/>
+  <g transform="translate(178,178)">
+    <rect x="0" y="0" width="34" height="26" rx="4" fill="#e6a93c" stroke="#3a2a1c" stroke-width="4"/>
+    <path d="M4 8h26M4 14h26M4 20h26" stroke="#c98a1f" stroke-width="2"/>
+  </g>
+</svg>

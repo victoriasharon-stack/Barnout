@@ -1,0 +1,117 @@
+<svg viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff3c4" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#ffe9a0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffe9a0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(760,42)">
+    <circle r="60" fill="url(#sunGlow)">
+      <animate attributeName="r" values="56;64;56" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="22" fill="#fff3c4"/>
+  </g>
+  <g fill="none" stroke="#4f7f3e" stroke-width="3" stroke-linecap="round" opacity="0.75">
+    <path d="M0 0 q6 -8 12 0 q6 -8 12 0">
+      <animateMotion path="M -20 40 C 200 10, 500 70, 950 20" dur="18s" repeatCount="indefinite"/>
+    </path>
+    <path d="M0 0 q5 -7 10 0 q5 -7 10 0">
+      <animateMotion path="M -30 90 C 250 60, 600 110, 940 55" dur="24s" begin="-6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M0 0 q4 -6 8 0 q4 -6 8 0">
+      <animateMotion path="M -15 65 C 180 40, 480 90, 900 35" dur="21s" begin="-12s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <path d="M0 150
+           C 90 110, 180 120, 260 140
+           C 360 165, 430 105, 520 130
+           C 610 155, 700 110, 800 140
+           C 850 155, 880 145, 900 150
+           L 900 240 L 0 240 Z"
+        fill="#a9d494" opacity="0.9"/>
+  <g transform="translate(120,64)" fill="#8fc178">
+    <rect x="14" y="30" width="8" height="70" />
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 18 17" to="360 18 17" dur="7s" repeatCount="indefinite"/>
+      <path d="M18 0
+               c14 4 20 18 22 30
+               c-12-4-24-6-30-2
+               c2-12 4-22 8-28z"/>
+      <path d="M18 0
+               c-4 14-2 26 4 34
+               c-10-6-20-12-24-22
+               c6-8 14-12 20-12z" opacity="0.85"/>
+    </g>
+    <circle cx="18" cy="30" r="4"/>
+  </g>
+  <g transform="translate(560,90)" fill="#8fc178">
+    <path d="M0 46 L0 20 C0 8 20 -6 50 -6 C80 -6 100 8 100 20 L100 46 Z"/>
+    <rect x="0" y="46" width="100" height="34"/>
+    <rect x="42" y="60" width="16" height="20" fill="#a9d494"/>
+  </g>
+  <g transform="translate(770,60)" fill="#7bb765">
+    <rect x="20" y="60" width="8" height="40"/>
+    <circle cx="24" cy="46" r="30"/>
+    <circle cx="4" cy="60" r="20"/>
+    <circle cx="44" cy="60" r="20"/>
+  </g>
+  <path d="M0 178
+           C 120 150, 220 190, 340 170
+           C 460 150, 540 195, 660 175
+           C 760 158, 840 185, 900 172
+           L 900 240 L 0 240 Z"
+        fill="#6fa85e"/>
+  <g transform="translate(90,168)" fill="#4f7f3e">
+    <ellipse cx="30" cy="28" rx="26" ry="14"/>
+    <ellipse cx="6" cy="18" rx="10" ry="8">
+      <animateTransform attributeName="transform" type="rotate" values="0 6 24;-6 6 24;0 6 24;5 6 24;0 6 24" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+    <rect x="10" y="30" width="5" height="12"/>
+    <rect x="44" y="30" width="5" height="12"/>
+  </g>
+  <g transform="translate(340,182)" fill="#4f7f3e">
+    <ellipse cx="18" cy="16" rx="16" ry="9"/>
+    <ellipse cx="4" cy="10" rx="6" ry="5">
+      <animateTransform attributeName="transform" type="rotate" values="0 4 15;6 4 15;0 4 15;-5 4 15;0 4 15" dur="4.5s" begin="-1.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <rect x="6" y="18" width="3" height="8"/>
+    <rect x="26" y="18" width="3" height="8"/>
+  </g>
+  <g transform="translate(660,172)" fill="#4f7f3e">
+    <ellipse cx="22" cy="20" rx="20" ry="11"/>
+    <ellipse cx="4" cy="12" rx="8" ry="6">
+      <animateTransform attributeName="transform" type="rotate" values="0 4 18;-5 4 18;0 4 18;6 4 18;0 4 18" dur="5.5s" begin="-3s" repeatCount="indefinite"/>
+    </ellipse>
+    <rect x="8" y="24" width="4" height="10"/>
+    <rect x="32" y="24" width="4" height="10"/>
+  </g>
+  <path d="M0 208
+           C 100 190, 200 220, 300 205
+           C 420 188, 520 222, 640 206
+           C 760 190, 840 216, 900 205
+           L 900 240 L 0 240 Z"
+        fill="#4f7f3e"/>
+  <g stroke="#3d6530" stroke-width="3" stroke-linecap="round">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 46 240;4 46 240;0 46 240;-4 46 240;0 46 240" dur="3.4s" repeatCount="indefinite"/>
+      <path d="M40 240v-16M46 240v-22M52 240v-14"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 256 240;-4 256 240;0 256 240;4 256 240;0 256 240" dur="3.8s" begin="-1s" repeatCount="indefinite"/>
+      <path d="M250 240v-18M256 240v-24M262 240v-14"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 486 240;4 486 240;0 486 240;-4 486 240;0 486 240" dur="3.1s" begin="-2s" repeatCount="indefinite"/>
+      <path d="M480 240v-14M486 240v-20M492 240v-12"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 726 240;-4 726 240;0 726 240;4 726 240;0 726 240" dur="3.6s" begin="-0.5s" repeatCount="indefinite"/>
+      <path d="M720 240v-18M726 240v-24M732 240v-14"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 866 240;4 866 240;0 866 240;-4 866 240;0 866 240" dur="4s" begin="-1.5s" repeatCount="indefinite"/>
+      <path d="M860 240v-14M866 240v-20M872 240v-12"/>
+    </g>
+  </g>
+</svg>
