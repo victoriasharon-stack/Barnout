@@ -418,3 +418,5 @@ setInterval(saveState, CONFIG.autosaveMs);
 window.addEventListener("beforeunload", saveState);
 
 
+
+// Runs every CONFIG.tickMs — advances hunger decay and production fill for all animals
