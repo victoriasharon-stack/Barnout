@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barnout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sky">
+    <img class="banner-art" src="assets/banner.svg" alt="" />
+    <div class="cloud cloud-a"></div>
+    <div class="cloud cloud-b"></div>
+    <div class="cloud cloud-c"></div>
+    <span class="leaf leaf-a">🍃</span>
+    <span class="leaf leaf-b">🍃</span>
+    <span class="leaf leaf-c">🌿</span>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">🌾</span>
+      <div>
+        <h1>Barnout</h1>
+        <p class="tagline">Feed it, grow it, sell it.</p>
+      </div>
+    </div>
+
+    <div class="stats" id="stats">
+      <div class="stat" title="Spend coins on animals, feed and land">
+        <span class="stat-icon">🪙</span>
+        <span class="stat-value" id="stat-coins">0</span>
+        <span class="stat-label">coins</span>
+      </div>
+      <div class="stat" title="Used to feed your cows and chickens">
+        <span class="stat-icon">🌽</span>
+        <span class="stat-value" id="stat-feed">0</span>
+        <span class="stat-label">feed</span>
+      </div>
+      <div class="stat" title="Collected from cows once their trough is full">
+        <span class="stat-icon">🥛</span>
+        <span class="stat-value" id="stat-milk">0</span>
+        <span class="stat-label">milk</span>
+      </div>
+      <div class="stat" title="Collected from chickens once their nest is full">
+        <span class="stat-icon">🥚</span>
+        <span class="stat-value" id="stat-eggs">0</span>
+        <span class="stat-label">eggs</span>
+      </div>
+      <div class="stat" title="Aged from milk in the Creamery, sells for more">
+        <span class="stat-icon">🧀</span>
+        <span class="stat-value" id="stat-cheese">0</span>
+        <span class="stat-label">cheese</span>
+      </div>
+    </div>
+
+    <button class="hint-toggle" id="hintToggle" title="Show or hide the how-to-play guide">
+      <span>?</span> How to play
+    </button>
+  </header>
+
+  <section class="hints" id="hintsPanel" hidden>
+    <h2>How this farm works</h2>
+    <div class="hint-grid">
+      <div class="hint-card">
+        <span class="hint-emoji">🟩</span>
+        <h3>1. Build on land</h3>
+        <p>Empty plots do nothing. Click an empty plot and choose to build a <strong>cow pen</strong> or a <strong>chicken coop</strong> on it.</p>
+      </div>
+      <div class="hint-card">
+        <span class="hint-emoji">🌽</span>
+        <h3>2. Keep them fed</h3>
+        <p>Animals only produce while their hunger bar is above zero. Buy <strong>feed</strong> from the shop and click "Feed" on a hungry animal.</p>
+      </div>
+      <div class="hint-card">
+        <span class="hint-emoji">🥛</span>
+        <h3>3. Collect the goods</h3>
+        <p>A fed cow slowly fills its <strong>trough with milk</strong>; a fed chicken fills its <strong>nest with eggs</strong>. Click "Collect" once the bar is full.</p>
+      </div>
+      <div class="hint-card">
+        <span class="hint-emoji">🧀</span>
+        <h3>4. Age it up (optional)</h3>
+        <p>Build the <strong>Creamery</strong> to turn raw milk into cheese over time. Cheese sells for a lot more than milk.</p>
+      </div>
+      <div class="hint-card">
+        <span class="hint-emoji">🪙</span>
+        <h3>5. Sell &amp; expand</h3>
+        <p>Sell milk, eggs and cheese in the <strong>Market</strong>, then spend coins on more feed, new animals, or clearing more <strong>land</strong> to build on.</p>
+      </div>
+      <div class="hint-card">
+        <span class="hint-emoji">💾</span>
+        <h3>Your progress saves itself</h3>
+        <p>The farm autosaves in your browser every few seconds. Close the tab any time — it'll be exactly as you left it.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="farm-layout">
+
+    <section class="panel farm-panel">
+      <div class="panel-head">
+        <h2>Your land</h2>
+        <p class="hint-line">Click a plot to build on it or manage the animal living there.</p>
+      </div>
+      <div class="farm-grid" id="farmGrid"></div>
+      <button class="btn btn-expand" id="expandBtn" title="Clear a new plot of land to build on">
+        🪓 Clear new land — <span id="expandCost">--</span> coins
+      </button>
+    </section>
+
+    <aside class="side-panels">
+
+      <section class="panel shop-panel">
+        <div class="panel-head">
+          <h2>Shop</h2>
+          <p class="hint-line">Buy feed to keep animals producing.</p>
+        </div>
+        <div class="shop-row">
+          <div class="shop-item">
+            <span class="shop-emoji">🌽</span>
+            <div class="shop-info">
+              <strong>Sack of feed</strong>
+              <small>+5 feed</small>
+            </div>
+          </div>
+          <button class="btn btn-buy" id="buyFeedBtn">Buy — <span id="feedCost">10</span> 🪙</button>
+        </div>
+      </section>
+
+      <section class="panel creamery-panel">
+        <div class="panel-head panel-head-with-art">
+          <div>
+            <h2>Creamery</h2>
+            <p class="hint-line" id="creameryHint">Ages milk into cheese over time.</p>
+          </div>
+          <img class="barn-art" src="assets/barn.svg" alt="" />
+        </div>
+        <div id="creameryLocked" class="creamery-locked">
+          <button class="btn btn-buy" id="buildCreameryBtn">🧀 Build Creamery — <span id="creameryCost">150</span> 🪙</button>
+        </div>
+        <div id="creameryActive" class="creamery-active" hidden>
+          <div class="progress-row">
+            <div class="progress-bar"><div class="progress-fill" id="creameryFill"></div></div>
+          </div>
+          <button class="btn btn-buy" id="convertBtn">Age 5 milk → cheese</button>
+        </div>
+      </section>
+
+      <section class="panel market-panel">
+        <div class="panel-head">
+          <h2>Market</h2>
+          <p class="hint-line">Sell what you've collected for coins.</p>
+        </div>
+        <div class="market-row">
+          <span class="market-emoji">🥛</span>
+          <span class="market-label">Milk</span>
+          <span class="market-price">4 🪙 each</span>
+          <button class="btn btn-sell" id="sellMilkBtn">Sell all</button>
+        </div>
+        <div class="market-row">
+          <span class="market-emoji">🥚</span>
+          <span class="market-label">Eggs</span>
+          <span class="market-price">3 🪙 each</span>
+          <button class="btn btn-sell" id="sellEggsBtn">Sell all</button>
+        </div>
+        <div class="market-row">
+          <span class="market-emoji">🧀</span>
+          <span class="market-label">Cheese</span>
+          <span class="market-price">15 🪙 each</span>
+          <button class="btn btn-sell" id="sellCheeseBtn">Sell all</button>
+        </div>
+      </section>
+
+    </aside>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <footer class="foot-note">
+    <span id="toast" class="toast" hidden></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
