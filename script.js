@@ -420,3 +420,5 @@ window.addEventListener("beforeunload", saveState);
 
 
 // Runs every CONFIG.tickMs — advances hunger decay and production fill for all animals
+
+// All tunable game numbers (costs, decay rates, fill rates) live in CONFIG above
